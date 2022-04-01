@@ -188,7 +188,7 @@ function getParticipants() {
         { name: "Odean Smith", points: 0 },
         { name: "Chetan Sakariya", points: 0 },
         { name: "Shimron Hetmyer", points: 0 },
-        { name: "Krishnappa Gowtham", points: 0 },
+        { name: "Robin Uthappa", points: 0 },
       ],
     },
   ]
