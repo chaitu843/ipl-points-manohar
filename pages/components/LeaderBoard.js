@@ -128,7 +128,7 @@ function getParticipants() {
         { name: "Rashid-Khan", points: 0 },
         { name: "Abhishek Sharma", points: 0 },
         { name: "Yuzvendra Chahal", points: 0 },
-        { name: "Mohammed Shami", points: 0 },
+        { name: "Mohammad Shami", points: 0 },
         { name: "Marcus Stoinis", points: 0 },
         { name: "Shubman Gill", points: 0 },
         { name: "Lockie Ferguson", points: 0 },
