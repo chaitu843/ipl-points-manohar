@@ -85,7 +85,7 @@ function getParticipants() {
         { name: "Nicholas Pooran", points: 0 },
         { name: "Manish Pandey", points: 0 },
         { name: "Narayan Jagadeesan", points: 0 },
-        { name: " Wriddhiman Saha", points: 0 }, 
+        { name: "Wriddhiman Saha", points: 0 }, 
       ],
     },
     {
