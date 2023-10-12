@@ -25,16 +25,27 @@ export default function Index(props) {
 }
 
 export async function getServerSideProps() {
+  // const { data } = await axios.get(
+  //   "https://fantasy.iplt20.com/season/services/feed/player/stats",
+  //   {
+  //     headers: {
+  //       Accept: "application/json, text/plain, */*",
+  //       "Content-Type": "application/json;charset=utf-8",
+  //       "User-Agent": "PostmanRuntime/7.24.1",
+  //     },
+  //   }
+  // );
+
   const { data } = await axios.get(
-    "https://fantasy.iplt20.com/season/services/feed/player/stats",
-    {
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json;charset=utf-8",
-        "User-Agent": "PostmanRuntime/7.24.1",
-      },
-    }
-  );
+      "https://icc.dream11.com/season/services/feed/player/stats",
+      {
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json;charset=utf-8",
+          "User-Agent": "PostmanRuntime/7.24.1",
+        },
+      }
+    );
 
   console.log(data);
 
@@ -49,8 +60,6 @@ export async function getServerSideProps() {
         points: parseFloat(player.ovrpoint),
       });
     });
-
-  // console.log(players);
 
   const lastScraped = new Date().toISOString();
   return {
