@@ -119,7 +119,7 @@ function getParticipants() {
         { name: "Pathum Nissanka", points: 0 },
         { name: "David Miller", points: 0 },
         { name: "Haris Rauf", points: 0 },
-        { name: "Lockie Ferguson ", points: 0 },
+        { name: "Lockie Ferguson", points: 0 },
         { name: "Shadab Khan", points: 0 },
         { name: "Mitchell Santner", points: 0 },
         { name: "Sam Curran", points: 0 },
