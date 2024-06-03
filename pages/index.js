@@ -5,6 +5,7 @@ import Box from "@material-ui/core/Box";
 import Link from "@material-ui/core/Link";
 import LeaderBoard from "./components/LeaderBoard";
 
+import cheerio from "cheerio";
 import axios from "axios";
 
 export default function Index(props) {
@@ -36,8 +37,8 @@ export async function getServerSideProps() {
   //   }
   // );
 
-  const { data } = await axios.get(
-      "https://icc.dream11.com/season/services/feed/player/stats",
+  const { data: {Data : {Value: {Players: playersStats= []} = {}} = {}} = {} } = await axios.get(
+      "https://fantasy.t20worldcup.com/static-assets/tournament-fantasy/feeds/players/players_1_en_1.json?buster=193",
       {
         headers: {
           Accept: "application/json, text/plain, */*",
@@ -47,17 +48,16 @@ export async function getServerSideProps() {
       }
     );
 
-  console.log(data);
-
-  let playersStats = data?.Data?.Value?.PlayerStats;
+  console.log(`From GetServerSite Props`);
+  console.log(playersStats);
 
   let players = [];
 
   playersStats &&
     playersStats.forEach((player) => {
       players.push({
-        name: player.plyrnm,
-        points: parseFloat(player.ovrpoint),
+        name: player.name,
+        points: parseFloat(player.gd_pts),
       });
     });
 
