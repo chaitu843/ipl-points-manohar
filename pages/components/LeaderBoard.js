@@ -144,7 +144,7 @@ function getParticipants() {
           { name: "Harry Brook", points: 0 },
           { name: "Haris Rauf", points: 0 },
           { name: "Josh Inglis", points: 0 },
-          { name: "Josh Hazelwood", points: 0 }
+          { name: "Josh Hazlewood", points: 0 }
       ],
     },
     {
