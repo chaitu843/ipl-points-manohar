@@ -38,7 +38,7 @@ export async function getServerSideProps() {
   // );
 
   const { data: {Data : {Value: {Players: playersStats= []} = {}} = {}} = {} } = await axios.get(
-      "https://fantasy.iplt20.com/classic/api/feed/gamedayplayers?lang=en&tourgamedayId=1&teamgamedayId=1&announcedVersion=03232025093735",
+      "https://fantasy.iplt20.com/classic/api/feed/live/gamedayplayers?lang=en&tourgamedayId=2&teamgamedayId=2&announcedVersion=03232025102034",
       {
         headers: {
           Accept: "application/json, text/plain, */*",
