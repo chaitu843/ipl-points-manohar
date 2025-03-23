@@ -38,7 +38,7 @@ export async function getServerSideProps() {
   // );
 
   const { data: {Data : {Value: {Players: playersStats= []} = {}} = {}} = {} } = await axios.get(
-      "https://fantasy.t20worldcup.com/static-assets/tournament-fantasy/feeds/players/players_1_en_10.json",
+      "https://fantasy.iplt20.com/classic/api/feed/gamedayplayers?lang=en&tourgamedayId=1&teamgamedayId=1&announcedVersion=03232025093735",
       {
         headers: {
           Accept: "application/json, text/plain, */*",
@@ -56,8 +56,8 @@ export async function getServerSideProps() {
   playersStats &&
     playersStats.forEach((player) => {
       players.push({
-        name: player.name,
-        points: parseFloat(player.ov_pts),
+        name: player.Name,
+        points: parseFloat(player.OverallPoints),
       });
     });
 
