@@ -37,8 +37,20 @@ export async function getServerSideProps() {
   //   }
   // );
 
+  const { data: {Data : {Value: fixturesList = [] = {}} = {}} = {} } = await axios.get(
+    "https://fantasy.iplt20.com/classic/api/feed/tour-fixtures",
+    {
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json;charset=utf-8",
+        "User-Agent": "PostmanRuntime/7.24.1",
+      },
+    }
+  );
+
+  const { TourGamedayId = 75, TeamGamedayId = 75 } = fixturesList.find(({MatchStatus}) => !MatchStatus) ?? {};
   const { data: {Data : {Value: {Players: playersStats= []} = {}} = {}} = {} } = await axios.get(
-      "https://fantasy.iplt20.com/classic/api/feed/live/gamedayplayers?lang=en&tourgamedayId=2&teamgamedayId=2&announcedVersion=03232025102034",
+      `https://fantasy.iplt20.com/classic/api/feed/gamedayplayers?lang=en&tourgamedayId=${TourGamedayId - 1}&teamgamedayId=${TeamGamedayId - 1}`,
       {
         headers: {
           Accept: "application/json, text/plain, */*",
@@ -47,9 +59,6 @@ export async function getServerSideProps() {
         },
       }
     );
-
-  console.log(`From GetServerSite Props`);
-  console.log(playersStats);
 
   let players = [];
 
