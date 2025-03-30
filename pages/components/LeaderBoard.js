@@ -129,7 +129,7 @@ function getParticipants() {
         { name: "Abhishek Sharma", "points": 0 },
         { name: "Sunil Narine", "points": 0 },
         { name: "Jos Buttler", "points": 0 },
-        { name: "Nitesh Rana", "points": 0 },
+        { name: "Nitish Rana", "points": 0 },
         { name: "Matheesha Pathirana", "points": 0 },
         { name: "Jake Fraser McGurk", "points": 0 },
         { name: "Wanindu Hasaranga", "points": 0 },
